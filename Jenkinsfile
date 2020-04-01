@@ -7,7 +7,7 @@ pipeline {
       agent any
       steps {
         sh 'docker build -t sel:latest .'
-        sh 'docker create volume data'
+        sh 'docker volume create data'
         sh 'docker run -v $(pwd)/kp:/data sel'
       }
     }
