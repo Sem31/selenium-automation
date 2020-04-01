@@ -18,3 +18,4 @@ RUN  cd /app/user/tests/
 CMD pytest --html=../../../data/report.html                       
 
 #  docker run -v $(pwd)/kp:/data kp1
+# 6af2f2b41b944117ab04d394a15a7a00
