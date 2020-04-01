@@ -11,8 +11,8 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 @pytest.fixture
 def driver(request):
-    sauce_username = "kamlesh31"
-    sauce_access_key = "9320d3d8-2b86-468b-ab21-01e9ff48a3f8"
+    sauce_username = username
+    sauce_access_key = access-key
     remote_url = "https://ondemand.saucelabs.com:443/wd/hub"
     # use sauce:options to handle all saucelabs.com-specific capabilities such as:
     # username, accesskey, build number, test name, timeouts etc.
