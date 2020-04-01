@@ -1,7 +1,7 @@
 FROM python
 
 #creating directory helloworld in container (linux machine)
-RUN pip install pytest && pip install selenium
+RUN pip install pytest && pip install selenium && pip install pytest-html
 RUN mkdir \Users\aaa\selenium 
 
 #copying helloworld.py from local directory to container's helloworld folder
@@ -14,9 +14,7 @@ RUN pwd
 
 RUN  cd /app/user/tests/
 
-# RUN ls
-#running helloworld.py in container
+# VOLUME /app/user/tests/myvolume
+CMD pytest --html=../../../data/report.html                       
 
-CMD pytest -v
-
-# ENTRYPOINT ["pytest" ]
+#  docker run -v $(pwd)/kp:/data kp1
