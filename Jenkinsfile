@@ -11,14 +11,15 @@ pipeline {
         //sh 'docker run -v $(pwd)/kp:/data sel'
       }
     }
-    agent none
+    
     stage('create volume') {
+      agent any
             steps {
                 sh 'docker volume create data'
             }
         }
-    agent none
    stage('Run Docker') {
+     agent any
             steps {
                 sh 'docker run -v $(pwd)/kp:/data sel'
             }
