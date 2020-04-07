@@ -6,8 +6,6 @@ pipeline {
     stage('Docker Build') {
       agent any
       steps {
-        sh 'python3 -m venv env'
-        sh 'source env/bin/activate'
         sh 'pip install pytest'
         sh 'pytest -v'
         sh 'docker build -t sel:latest .'
