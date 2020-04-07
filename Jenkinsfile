@@ -6,8 +6,6 @@ pipeline {
     stage('Docker Build') {
       agent any
       steps {
-        sh 'pip install pytest'
-        sh 'pytest -v'
         sh 'docker build -t sel:latest .'
         //sh 'docker volume create data'
         //sh 'docker run -v $(pwd)/kp:/data sel'
