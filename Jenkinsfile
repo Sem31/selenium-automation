@@ -25,10 +25,6 @@ pipeline {
             }
         }
                  stage ('Test') {
-                  steps {
-                    // run tests with coverage
-                    sh 'bundle exec rake spec'
-                  }
                   post {
                     failure {
                       // publish html
