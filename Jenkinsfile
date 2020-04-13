@@ -24,5 +24,26 @@ pipeline {
                 sh 'docker run -v $(pwd)/kp:/data sel'
             }
         }
+     stage ('Test') {
+      steps {
+        // run tests with coverage
+        sh 'bundle exec rake spec'
+      }
+
+      post {
+        failure {
+          // publish html
+          publishHTML target: [
+              allowMissing: false,
+              alwaysLinkToLastBuild: false,
+              keepAll: true,
+              reportDir: 'report_html',
+              reportFiles: 'report.html',
+              reportName: 'RCov Report'
+            ]
+        }
+      }
+    }
+  }
   }
 }
