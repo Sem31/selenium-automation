@@ -37,9 +37,8 @@ pipeline {
               allowMissing: false,
               alwaysLinkToLastBuild: false,
               keepAll: true,
-              reportDir: 'report_html',
-              reportFiles: 'report.html',
-              reportName: 'RCov Report'
+              reportDir: 'kp',
+              reportFiles: 'report.html'
             ]
         }
       }
