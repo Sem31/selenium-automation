@@ -25,6 +25,10 @@ pipeline {
             }
         }
                  stage ('Test') {
+                   agent any
+                   steps{
+                    sh "docker volume create dataa"
+                   }
                   post {
                     failure {
                       // publish html
