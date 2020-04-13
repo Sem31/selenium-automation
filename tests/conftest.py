@@ -7,8 +7,8 @@ import sys
 
 @pytest.fixture
 def browser(request):
-    sauce_username = "kamlesh31"
-    sauce_access_key = "9320d3d8-2b86-468b-ab21-01e9ff48a3f8"
+    sauce_username = "sem31"
+    sauce_access_key = "1c0efcb2-430a-4f80-984d-8cdb808a82b4"
     remote_url = "https://ondemand.saucelabs.com:443/wd/hub"
 
     sauceOptions = {
