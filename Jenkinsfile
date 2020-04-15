@@ -33,8 +33,8 @@ pipeline {
                      //always{
                       // publish html
                       publishHTML target: [
-                          allowMissing: false,
-                          alwaysLinkToLastBuild: false,
+                          //allowMissing: false,
+                          alwaysLinkToLastBuild: true,
                           keepAll: true,
                           reportDir: 'kp',
                           reportFiles: 'report.html'
