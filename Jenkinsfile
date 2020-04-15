@@ -20,12 +20,12 @@ pipeline {
         }
    stage('Run Docker') {
      agent any
-      steps {
+      steps{
                 sh 'docker run -v $(pwd)/kp:/data sel'
                 publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'kp', 
                                   reportFiles: 'report.html', reportName: 'HTML Report', reportTitles: 'new'])
             }
-    
+   }
            stage ('Test') {
                    agent any
                    steps{
