@@ -37,7 +37,7 @@ pipeline {
                           allowMissing: false,
                           alwaysLinkToLastBuild: true,
                           keepAll: true,
-                          reportDir: '/app/user/kp',
+                          reportDir: '/Users/aaa/.jenkins/workspace/docker_container/kp',
                           reportFiles: 'report.html'
                         ]
                    
