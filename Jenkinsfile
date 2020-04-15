@@ -27,7 +27,8 @@ pipeline {
                  stage ('Test') {
                    agent any
                    steps{
-                    sh "docker volume create dataa"
+                    sh "$(pwd)/kp"
+                     echo "hi"
                    }
                   post {
                      always{
