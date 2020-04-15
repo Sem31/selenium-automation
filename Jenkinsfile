@@ -26,6 +26,10 @@ pipeline {
         }
                  stage ('Test') {
                    agent any
+                   steps{
+                     sh "ls"
+                     sh "pwd"
+                   }
                   post {
                      always{
                       // publish html
