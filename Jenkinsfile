@@ -22,7 +22,6 @@ pipeline {
      agent any
             steps {
                 sh 'docker run -v $(pwd)/kp:/data sel'
-              sh 'docker cp ../../../data/report.html .'
             }
         }
                  stage ('Test') {
