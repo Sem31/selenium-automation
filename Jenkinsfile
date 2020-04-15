@@ -30,7 +30,7 @@ pipeline {
                      sh "pwd"
                    }
                   post {
-                     
+                    failure{
                       publishHTML([allowMissing: false, 
                                    alwaysLinkToLastBuild: false, 
                                    keepAll: false, 
@@ -38,7 +38,7 @@ pipeline {
                                    reportFiles: 'report.html', 
                                    reportName: 'HTML Report', 
                                    reportTitles: ''])
-                   
+                    }
                  }
                  }
   }
