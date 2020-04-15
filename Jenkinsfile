@@ -32,20 +32,14 @@ pipeline {
                   post {
                      always{
                       // publish html
-                      //publishHTML target: [
-                        //  allowMissing: false,
-                          //alwaysLinkToLastBuild: true,
-                          //keepAll: true,
-                          //reportDir: 'kp',
-                          //reportFiles: 'report.html'
-                        //]
-                       publishHTML([allowMissing: false,
-                         alwaysLinkToLastBuild: true,
-                         keepAll: true,
-                         reportDir: 'kp',
-                         reportFiles: 'report.html'
-                         //reportName: 'Docs Loadtest Dashboard'
-                         ])
+                      publishHTML target: [
+                          allowMissing: false,
+                          alwaysLinkToLastBuild: true,
+                          keepAll: true,
+                          reportDir: 'kp',
+                          reportFiles: 'report.html'
+                        ]
+                   
                    }
                  }
                  }
