@@ -31,7 +31,7 @@ pipeline {
                      sh "pwd"
                    }
                   post {
-                     success{
+                     always{
                       publishHTML([allowMissing: false, 
                                    alwaysLinkToLastBuild: false, 
                                    keepAll: false, 
