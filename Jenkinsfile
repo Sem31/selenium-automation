@@ -26,10 +26,6 @@ pipeline {
         }
                  stage ('Test') {
                    agent any
-                   steps{
-                    echo "$(pwd)/kp"
-                     echo "hi"
-                   }
                   post {
                      always{
                       // publish html
