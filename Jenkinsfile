@@ -27,7 +27,7 @@ pipeline {
                  stage ('Test') {
                    agent any
                    steps{
-                    sh "$(pwd)/kp"
+                    echo "$(pwd)/kp"
                      echo "hi"
                    }
                   post {
