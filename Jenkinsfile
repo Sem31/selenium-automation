@@ -22,11 +22,15 @@ pipeline {
      agent any
       steps{
                 sh 'docker run -v $(pwd)/kp:/data sel'
-        finally { 
-          publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'kp', 
-                                  reportFiles: 'report.html', reportName: 'HTML Report', reportTitles: 'new'])
-        }
             }
+      post {
+           always{
+                      sh "pwd"
+                     publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'kp', 
+                                  reportFiles: 'report.html', reportName: 'HTML Report', reportTitles: 'new'])
+                  
+            }
+      }
    }
            stage ('Test') {
                    agent any
