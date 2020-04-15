@@ -30,7 +30,7 @@ pipeline {
                     sh "docker volume create dataa"
                    }
                   post {
-                    failure {
+                    success {
                       // publish html
                       publishHTML target: [
                           allowMissing: false,
