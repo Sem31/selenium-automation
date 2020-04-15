@@ -28,14 +28,10 @@ pipeline {
                       sh "pwd"
                      publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'kp', 
                                   reportFiles: 'report.html', reportName: 'HTML Report', reportTitles: 'new'])
-                  
+                  slackSend color: '#BADA55', message: 'Hello, World!', channel: 'memes'
             }
       }
-     stage("speak") {
-       steps{
-        slackSend color: '#BADA55', message: 'Hello, World!', channel: 'memes'
-       }
-    }
+    
    }
             
   }
