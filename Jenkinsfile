@@ -27,8 +27,8 @@ pipeline {
                  stage ('Test') {
                    agent any
                    steps{
-                    sh "docker volume create dataa"
-                   }
+                    //sh "docker volume create dataa"
+                   //}
                   //post {
                      //always{
                       // publish html
@@ -39,7 +39,7 @@ pipeline {
                           reportDir: 'kp',
                           reportFiles: 'report.html'
                         ]
-                   // }
+                   }
                   //}
                  }
   }
