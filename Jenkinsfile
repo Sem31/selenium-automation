@@ -24,22 +24,6 @@ pipeline {
                 sh 'docker run -v $(pwd)/kp:/data sel'
             }
         }
-                 stage ('Test') {
-                   agent any
-                   steps{
-                     sh "pwd"
-                   }
-                  post {
-                    failure{
-                      publishHTML([allowMissing: false, 
-                                   alwaysLinkToLastBuild: false, 
-                                   keepAll: false, 
-                                   reportDir: 'kp', 
-                                   reportFiles: 'report.html', 
-                                   reportName: 'HTML Report', 
-                                   reportTitles: ''])
-                    }
-                 }
-                 }
+                
   }
 }
