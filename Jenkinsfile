@@ -32,15 +32,13 @@ pipeline {
                    }
                   post {
                      success{
-                      // publish html
-                      publishHTML target: [
-                          allowMissing: false,
-                          alwaysLinkToLastBuild: true,
-                          keepAll: true,
-                          reportDir: '/Users/aaa/.jenkins/workspace/docker_container/kp',
-                          reportFiles: 'report.html'
-                        ]
-                    sh "ls"
+                      publishHTML([allowMissing: false, 
+                                   alwaysLinkToLastBuild: false, 
+                                   keepAll: false, 
+                                   reportDir: 'kp', 
+                                   reportFiles: 'report.html', 
+                                   reportName: 'HTML Report', 
+                                   reportTitles: ''])
                    }
                  }
                  }
