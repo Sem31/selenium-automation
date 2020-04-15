@@ -32,7 +32,9 @@ pipeline {
             }
       }
      stage("speak") {
+       steps{
         slackSend color: '#BADA55', message: 'Hello, World!', channel: 'memes'
+       }
     }
    }
             
