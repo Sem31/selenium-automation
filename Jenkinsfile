@@ -21,7 +21,7 @@ pipeline {
    stage('Run Docker') {
      agent any
             steps {
-                sh 'ls'
+                sh 'docker run -v $(pwd)/kp:/data sel'
             }
         }
                  stage ('Test') {
