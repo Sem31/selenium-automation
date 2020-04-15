@@ -28,7 +28,7 @@ pipeline {
                    agent any
                    steps{
                      sh "pwd"
-                     publishHTML([allowMissing: true, alwaysLinkToLastBuild: True, keepAll: True, reportDir: 'kp', 
+                     publishHTML([allowMissing: true, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'kp', 
                                   reportFiles: 'report.html', reportName: 'HTML Report', reportTitles: 'new'])
                    }
                  // post {
