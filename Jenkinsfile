@@ -38,7 +38,7 @@ pipeline {
                  //}
                  }     
   }
-  stages('html file'){
+  stages{
   
     stage ('Test 12') {
                    agent any
