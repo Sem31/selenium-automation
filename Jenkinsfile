@@ -29,8 +29,8 @@ pipeline {
                    steps{
                     sh "docker volume create dataa"
                    }
-                  post {
-                     always{
+                  //post {
+                     //always{
                       // publish html
                       publishHTML target: [
                           allowMissing: false,
@@ -39,8 +39,8 @@ pipeline {
                           reportDir: 'kp',
                           reportFiles: 'report.html'
                         ]
-                    }
-                  }
+                   // }
+                  //}
                  }
   }
 }
