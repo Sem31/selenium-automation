@@ -17,7 +17,7 @@ class TestCase(BaseTest):
     result_page = DuckDuckGoResultPage(browser)
     assert result_page.link_div_count() > 0
     assert result_page.phrase_result_count(PHRASE) > 0
-    assert result_page.search_input_value() == PHRASE0
+    assert result_page.search_input_value() == PHRASE
 
   # def test_basic_duckduckgo_search_1(self,browser):
   #   # Set up test case data
