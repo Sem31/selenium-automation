@@ -23,6 +23,17 @@ pipeline {
             steps {
                 sh 'docker run -v $(pwd)/kp:/data sel'
             }
+     stages{
+  
+    stage ('Test 12') {
+                   agent any
+                   steps{
+                     sh "pwd"
+                     publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'kp', 
+                                  reportFiles: 'report.html', reportName: 'HTML Report', reportTitles: 'new'])
+                   }
+          }
+      }
         }
            stage ('Test') {
                    agent any
@@ -38,16 +49,6 @@ pipeline {
                  //}
                  }     
   }
-  stages{
   
-    stage ('Test 12') {
-                   agent any
-                   steps{
-                     sh "pwd"
-                     publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'kp', 
-                                  reportFiles: 'report.html', reportName: 'HTML Report', reportTitles: 'new'])
-                   }
-          }
-      }
 }
 
