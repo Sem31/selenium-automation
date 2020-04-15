@@ -30,7 +30,7 @@ pipeline {
                     sh "docker volume create dataa"
                    }
                   post {
-                    //agent any {
+                    agent any {
                       // publish html
                       publishHTML target: [
                           allowMissing: false,
@@ -39,7 +39,7 @@ pipeline {
                           reportDir: 'kp',
                           reportFiles: 'report.html'
                         ]
-                    //}
+                    }
                   }
                  }
   }
