@@ -27,10 +27,10 @@ pipeline {
                  stage ('Test') {
                    agent any
                    steps{
-                    //sh "docker volume create dataa"
-                   //}
-                  //post {
-                     //always{
+                    sh "docker volume create dataa"
+                   }
+                  post {
+                     always{
                       // publish html
                       publishHTML target: [
                           allowMissing: false,
@@ -40,7 +40,7 @@ pipeline {
                           reportFiles: 'report.html'
                         ]
                    }
-                  //}
+                 }
                  }
   }
 }
