@@ -47,6 +47,7 @@ pipeline {
                      publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'kp', 
                                   reportFiles: 'report.html', reportName: 'HTML Report', reportTitles: 'new'])
                    }
-  }
+          }
+      }
 }
 }
