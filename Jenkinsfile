@@ -31,7 +31,7 @@ pipeline {
                      sh "pwd"
                    }
                   post {
-                     always{
+                     failure{
                       // publish html
                       publishHTML target: [
                           allowMissing: false,
