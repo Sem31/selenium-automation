@@ -19,8 +19,7 @@ pipeline {
             }
         }
    stage('Run Docker') {
-     agent 
-     //any
+     agent any
             //steps
      {
                 sh 'docker run -v $(pwd)/kp:/data sel'
