@@ -33,7 +33,7 @@ pipeline {
                           allowMissing: false,
                           alwaysLinkToLastBuild: true,
                           keepAll: true,
-                          reportDir: '$(pwd)/kp/',
+                          reportDir: '/app/user/kp',
                           reportFiles: 'report.html'
                         ]
                    
