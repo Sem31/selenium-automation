@@ -43,7 +43,7 @@ pipeline {
                          alwaysLinkToLastBuild: true,
                          keepAll: true,
                          reportDir: 'kp',
-                         reportFiles: 'report.html',
+                         reportFiles: 'report.html'
                          //reportName: 'Docs Loadtest Dashboard'
                          ])
                    }
