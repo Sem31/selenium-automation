@@ -1,21 +1,12 @@
 FROM python
 
-#creating directory helloworld in container (linux machine)
-RUN pip install pytest && pip install selenium && pip install pytest-html
-RUN mkdir \Users\aaa\selenium 
 
-#copying helloworld.py from local directory to container's helloworld folder
+RUN pip install pytest && pip install selenium && pip install pytest-html && pip install requests && pip install pytest-rerunfailures
+RUN mkdir \Users\sdosi\selenium
 
-COPY . /app/user 
-WORKDIR /app/user/tests/  
+COPY . /app/user
+WORKDIR /app/user/cms-ui-automation/test/
 
-RUN command ls
-RUN pwd
 
-RUN  cd /app/user/tests/
-
-# VOLUME /app/user/tests/myvolume
-CMD pytest --html=../../../data/report.html                       
-
-#  docker run -v $(pwd)/kp:/data kp1
-# 6af2f2b41b944117ab04d394a15a7a00
+VOLUME /app/user/tests/myvolume
+CMD ENV_NAME='uplynk' pytest -vs -m regression --disable-warnings -W ignore::DeprecationWarning --html=../../../../data/report.html --reruns 4
